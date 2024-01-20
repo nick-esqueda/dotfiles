@@ -1,0 +1,111 @@
+// Place your key bindings in this file to override the defaults
+[
+  { // javascript "console.log()" shortcut
+    "key": "ctrl+shift+l",
+    "command": "editor.action.insertSnippet",
+    "when": "editorTextFocus",
+    "args": {
+      "snippet": "console.log(${TM_SELECTED_TEXT}$1)$2;"
+    }
+  },
+  // toggle the sidebar when focus is not on a text input.
+  // NOTE: must use neovim config remap to toggle the sidebar when focused on
+  // an editor.
+  {
+    "key": "space e",
+    "when": "!inputFocus",
+    "command": "workbench.action.toggleSidebarVisibility"
+  },
+  { // when focus is on the sidebar, move focus to the first editor group.
+    // this helps make movement between sidebar and editors seamless.
+    "key": "ctrl+l",
+    "when": "sideBarFocus",
+    "command": "workbench.action.focusFirstEditorGroup"
+  },
+  { // bring focus back to the editor. (leave the pane you were on open)
+    "key": "ctrl+;",
+    // "when": "",
+    "command": "workbench.action.focusActiveEditorGroup"
+  }, // and now i'm back yay and still go back
+  { // move down to next side bar view.
+    "key": "ctrl+j",
+    "when": "sideBarFocus",
+    "command": "workbench.action.nextSideBarView"
+  },
+  { // move up to previous side bar view.
+    "key": "ctrl+k",
+    "when": "sideBarFocus",
+    "command": "workbench.action.previousSideBarView"
+  },
+  { // toggle the terminal pane.
+    "key": "ctrl+t",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  { // create another terminal instance.
+    "key": "ctrl+shift+t",
+    "command": "workbench.action.terminal.new"
+  },
+  { // move down to next terminal instance.
+    "key": "ctrl+j",
+    "when": "terminalFocus && terminalHasBeenCreated",
+    "command": "workbench.action.terminal.focusNext"
+  },
+  { // move up to previous terminal instance.
+    "key": "ctrl+k",
+    "when": "terminalFocus && terminalHasBeenCreated",
+    "command": "workbench.action.terminal.focusPrevious"
+  },
+  { // toggle the terminal panel between full size and normal size.
+    "key": "ctrl+m",
+    "command": "workbench.action.toggleMaximizedPanel"
+  },
+  { // move left to previous panel view.
+    "key": "ctrl+h",
+    "when": "panelFocus",
+    "command": "workbench.action.previousPanelView"
+  },
+  { // move right to next panel view.
+    "key": "ctrl+l",
+    "when": "panelFocus",
+    "command": "workbench.action.nextPanelView"
+  },
+  { // close all open folders in explorer.
+    "key": "space o",
+    "when": "sideBarFocus && !inputFocus",
+    "command": "workbench.files.action.collapseExplorerFolders"
+  },
+  { // close all open search results in results panel.
+    "key": "space o",
+    "when": "sideBarFocus && !inputFocus && searchViewletVisible",
+    "command": "search.action.collapseSearchResults"
+  },
+  { // close the Quick Open bar (the ctrl+p dialogue box)
+    // note: also closes neovim search (/)
+    "key": "ctrl+[",
+    "when": "inQuickOpen",
+    "command": "workbench.action.closeQuickOpen"
+  },
+  { // in file explorer, close the file search popup.
+    "key": "ctrl+[",
+    "when": "listFocus && treeFindOpen",
+    "command": "list.closeFind"
+  },
+  { // in search panel, move focus from search input box to results list.
+    "key": "ctrl+[",
+    "when": "searchInputBoxFocus",
+    "command": "search.action.focusSearchList"
+  },
+  { // in search panel, move focus from search input box to results list.
+    "key": "enter",
+    "when": "searchInputBoxFocus",
+    "command": "search.action.focusSearchList"
+  },
+]
+/*
+TODO:
+
+ctrl+[ to exit the "new file"/"new folder" input box in the file tree
+
+open options menu when highlighted on file in the tree
+
+*/

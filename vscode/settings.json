@@ -1,0 +1,198 @@
+{
+  "files.autoSave": "onFocusChange",
+  "liveServer.settings.donotVerifyTags": true,
+  "editor.fontSize": 15,
+  "editor.rulers": [79, 120],
+  "editor.guides.bracketPairs": "active",
+  "editor.semanticHighlighting.enabled": "configuredByTheme",
+  "editor.tokenColorCustomizations": {
+    "[Neon Monokai]": {
+      "strings": "#ecea70",
+      "textMateRules": [
+        // red: #F92672
+        // green: #A6E22E
+        // blue: #66D9EF
+        // purple: #AE81FF
+        // white: #F8F8F2
+        {
+          "scope": "variable.language.this.js",
+          "settings": {
+            "foreground": "#66D9EF"
+          }
+        },
+        {
+          "scope": "keyword.operator.new.js",
+          "settings": {
+            "foreground": "#66D9EF"
+          }
+        },
+        {
+          "scope": "variable.language.super.js",
+          "settings": {
+            "foreground": "#66D9EF"
+          }
+        },
+        {
+          "scope": "variable.other.object.js",
+          "settings": {
+            "foreground": "#F8F8F2"
+          }
+        },
+        {
+          "scope": "variable.other.property.js",
+          "settings": {
+            "foreground": "#A6E22E"
+          }
+        },
+        {
+          "scope": "variable.other.object.property.js",
+          "settings": {
+            "foreground": "#66D9EF"
+          }
+        },
+        {
+          "scope": "entity.name.function.js",
+          "settings": {
+            "foreground": "#A6E22E"
+          }
+        },
+        {
+          "scope": "meta.embedded.line.js",
+          "settings": {
+            "foreground": "#F8F8F2"
+          }
+        },
+        {
+          "scope": "punctuation.definition.template-expression.end.js",
+          "settings": {
+            "foreground": "#66D9EF"
+          }
+        },
+        {
+          "scope": "punctuation.definition.template-expression.begin.js",
+          "settings": {
+            "foreground": "#66D9EF"
+          }
+        },
+        {
+          "scope": "entity.name.tag.html",
+          "settings": {
+            "foreground": "#66D9EF"
+          }
+        },
+        {
+          "scope": "entity.other.attribute-name.html",
+          "settings": {
+            "foreground": "#A6E22E"
+          }
+        },
+      ],
+    },
+    "[One Dark Theme]": {
+      // "strings": "#ecea70",
+      "textMateRules": [
+        {
+          "scope": "meta.embedded.line.js",
+          "settings": {
+            "foreground": "#BBBBBB"
+          }
+        },
+        {
+          "scope": "comment.line.double-slash.js",
+          "settings": {
+            "foreground": "#8b94a5"
+          }
+        },
+        {
+          "scope": "comment.block.js",
+          "settings": {
+            "foreground": "#8b94a5"
+          }
+        },
+        {
+          "scope": "comment.line.number-sign.python",
+          "settings": {
+            "foreground": "#8b94a5"
+          }
+        },
+      ],
+    }
+  },
+  "workbench.startupEditor": "none",
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Launch",
+        "console": "integratedTerminal",
+        "program": "${file}"
+      },
+      {
+        "type": "node",
+        "request": "launch",
+        "name": "Mocha Tests",
+        "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+        "args": [
+          "-u",
+          "bdd",
+          "--timeout",
+          "999999",
+          "--colors",
+          "${workspaceFolder}/test"
+        ],
+        "internalConsoleOptions": "openOnSessionStart",
+        "skipFiles": [
+          "<node_internals>/**"
+        ]
+      }
+    ]
+  },
+  "workbench.colorCustomizations": {
+    // colors from the extension
+    // gold:
+    // blue:
+    // purple:
+    "editorBracketHighlight.foreground1": "#ECEA70",
+    "editorBracketHighlight.foreground2": "#66D9EF",
+    "editorBracketHighlight.foreground3": "#AE81FF",
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.bracketPairColorization.enabled": true,
+  "workbench.tree.indent": 16,
+  "editor.trimAutoWhitespace": false,
+  "editor.smartSelect.selectLeadingAndTrailingWhitespace": false,
+  "terminal.integrated.scrollback": 15000,
+  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.env.windows": {
+    "PATH": "${env:PATH}",
+    "EDITOR": "nvim"
+  },
+  "editor.lineNumbers": "relative",
+  "vscode-neovim.neovimExecutablePaths.win32": "C:\\Program Files\\Neovim\\bin\\nvim.exe",
+
+  // // CODE SUGGESTIONS / INTELLISENSE
+  // "editor.quickSuggestions": {
+  //   "other": "off",
+  //   "comments": "off",
+  //   "strings": "off"
+  // },
+  // "editor.suggestOnTriggerCharacters": false,
+  // "editor.wordBasedSuggestions": false,
+  // "editor.parameterHints.enabled": false
+  
+  // NEOVIM
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1
+  },
+  "terminal.integrated.defaultProfile.windows": "Git Bash",
+  "files.insertFinalNewline": true,
+  "python.languageServer": "Pylance",
+  "python.terminal.activateEnvironment": false,
+  "editor.tabSize": 2,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.black-formatter",
+    "editor.formatOnSave": true
+  }
+}
