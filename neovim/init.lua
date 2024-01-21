@@ -5,6 +5,7 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<leader>y", "\"*y")
 vim.keymap.set("n", "<leader>p", "\"*p")
 vim.keymap.set("v", "<leader>y", "\"*y")
+vim.keymap.set("v", "<leader>p", "\"*p")
 
 if vim.g.vscode then
   -- VSCode extension commmands
@@ -37,9 +38,13 @@ else
   -- ordinary Neovim
 end
 
+vim.opt.number = true
+vim.opt.relativenumber = true
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
+vim.opt.expandtab = true
 vim.opt.hlsearch = false
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.scrolloff = 8
+
