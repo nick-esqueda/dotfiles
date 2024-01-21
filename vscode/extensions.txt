@@ -1,6 +1,7 @@
 amandeepmittal.pug
 asvetliakov.vscode-neovim
 bmewburn.vscode-intelephense-client
+DavidAnson.vscode-markdownlint
 dsznajder.es7-react-js-snippets
 ecmel.vscode-html-css
 formulahendry.auto-rename-tag
