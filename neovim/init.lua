@@ -5,10 +5,10 @@ keymap("n", "j", "gj")
 keymap("n", "k", "gk")
 keymap("n", "<C-d>", "<C-d>zz")
 keymap("n", "<C-u>", "<C-u>zz")
-keymap("n", "<leader>y", "\"*y")
-keymap("n", "<leader>p", "\"*p")
-keymap("v", "<leader>y", "\"*y")
-keymap("v", "<leader>p", "\"*p")
+keymap("n", "<leader>y", "\"+y")
+keymap("n", "<leader>p", "\"+p")
+keymap("v", "<leader>y", "\"+y")
+keymap("v", "<leader>p", "\"+p")
 
 if vim.g.vscode then
   -- VSCode extension commmands
