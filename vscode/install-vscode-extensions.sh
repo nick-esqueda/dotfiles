@@ -8,6 +8,6 @@ fi
 echo "installing extensions..."
 while read -r line; do
 	code --install-extension "$line"
-done < $HOME/.dotfiles/vscode/extensions.txt
+done < $HOME/dotfiles/vscode/extensions.txt
 
 echo "done installing VSCode extensions."
