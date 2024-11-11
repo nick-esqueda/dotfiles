@@ -6,7 +6,7 @@ Clone this repo to your home directory (~)
 
 Create a symlink in your home directory pointing to the .bashrc in this repo.
 
-`ln -s ~/dotfiles/bash/.bashrc`
+`ln -s ~/dotfiles/bash/.bashrc ~/.bashrc`
 
 ## Neovim
 
