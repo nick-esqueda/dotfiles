@@ -1,6 +1,7 @@
 amandeepmittal.pug
 asvetliakov.vscode-neovim
 bmewburn.vscode-intelephense-client
+davidanson.vscode-markdownlint
 dsznajder.es7-react-js-snippets
 ecmel.vscode-html-css
 esbenp.prettier-vscode
@@ -12,6 +13,7 @@ ms-python.debugpy
 ms-python.python
 ms-python.vscode-pylance
 ms-toolsai.jupyter-keymap
+ms-vscode-remote.remote-containers
 ms-vscode-remote.remote-wsl
 pkief.material-icon-theme
 redhat.java
