@@ -74,3 +74,18 @@ From Git Bash
 ```bash
 ~/dotfiles/vscode/install-vscode-extensions.sh
 ```
+
+## IntelliJ
+
+Create a symlink in your home directory pointing to the .ideavimrc in this repo.
+
+### Ubuntu
+
+```bash
+ln -s ~/dotfiles/intellij/.ideavimrc ~/.ideavimrc
+```
+
+### Windows
+
+-
+

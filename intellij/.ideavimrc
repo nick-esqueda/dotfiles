@@ -1,0 +1,44 @@
+" Set leader key
+let mapleader = " "
+
+" General settings from VSCode's settings.json
+set nerdtree
+set relativenumber
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set scrolloff=8
+set ignorecase
+set smartcase
+
+" General keybindings
+nnoremap j gj
+nnoremap k gk
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
+vnoremap <Leader>y "+y
+vnoremap <Leader>p "+p
+
+" Editor navigation
+nnoremap H :action PreviousTab<CR>
+nnoremap L :action NextTab<CR>
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+
+" Close and move editors
+nnoremap <Leader>di :action CloseEditor<CR>
+nnoremap <Leader>da :action CloseAllEditors<CR>
+nnoremap <Leader>dp :action CloseAllEditorsButActive<CR>
+nnoremap <Leader>du :action ReopenClosedTab<CR>
+nnoremap <Leader>e :action ActivateProjectToolWindow<CR>
+nnoremap <Leader>v :action SplitVertically<CR>
+nnoremap <Leader>s :action SplitHorizontally<CR>
+
+" Gutter markers navigation
+nnoremap ]d :action GotoNextError<CR>
+nnoremap [d :action GotoPreviousError<CR>
+
+" Implementation lookup
+nnoremap gm :action GotoImplementation<CR>
