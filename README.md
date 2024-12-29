@@ -77,6 +77,10 @@ From Git Bash
 
 ## IntelliJ
 
+Most IntelliJ configs (keymaps, plugins, settings) are synced via JetBrains account.
+
+Make sure your IntelliJ instance is logged in to your account to sync settings (Log in using GitHub - nick_esqueda@outlook.com)
+
 Create a symlink in your home directory pointing to the .ideavimrc in this repo.
 
 ### Ubuntu
