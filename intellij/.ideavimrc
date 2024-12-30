@@ -29,8 +29,8 @@ nnoremap <C-k> <C-w>k
 
 " Close and move editors
 nnoremap <Leader>di :action CloseEditor<CR>
-nnoremap <Leader>da :action CloseAllEditors<CR>
-nnoremap <Leader>dp :action CloseAllEditorsButActive<CR>
+nnoremap <Leader>dp :action CloseAllEditors<CR>
+nnoremap <Leader>da :action CloseAllEditorsButActive<CR>
 nnoremap <Leader>du :action ReopenClosedTab<CR>
 nnoremap <Leader>e :action ActivateProjectToolWindow<CR>
 nnoremap <Leader>v :action SplitVertically<CR>
