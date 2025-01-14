@@ -1,7 +1,7 @@
 " Set leader key
 let mapleader = " "
 
-" General settings from VSCode's settings.json
+" General settings
 set nerdtree
 set relativenumber
 set tabstop=2
@@ -31,6 +31,7 @@ nnoremap <C-k> <C-w>k
 nnoremap <Leader>di :action CloseEditor<CR>
 nnoremap <Leader>dp :action CloseAllEditors<CR>
 nnoremap <Leader>da :action CloseAllEditorsButActive<CR>
+nnoremap <Leader>D :action CloseAllToTheRight<CR>
 nnoremap <Leader>du :action ReopenClosedTab<CR>
 nnoremap <Leader>e :action ActivateProjectToolWindow<CR>
 nnoremap <Leader>v :action SplitVertically<CR>
@@ -42,3 +43,7 @@ nnoremap [d :action GotoPreviousError<CR>
 
 " Implementation lookup
 nnoremap gm :action GotoImplementation<CR>
+
+"Intellij features
+nnoremap <Leader>g :action Generate<CR>
+nnoremap <Leader>r :action RenameElement<CR>

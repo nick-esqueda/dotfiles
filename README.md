@@ -79,6 +79,8 @@ From Git Bash
 
 Most IntelliJ configs (keymaps, plugins, settings) are synced via JetBrains account.
 
+- TODO! Settings aren't synced across OSes. Set up a new way to sync keymaps and other configs!
+
 Make sure your IntelliJ instance is logged in to your account to sync settings (Log in using GitHub - nick_esqueda@outlook.com)
 
 Create a symlink in your home directory pointing to the .ideavimrc in this repo.
@@ -91,5 +93,7 @@ ln -s ~/dotfiles/intellij/.ideavimrc ~/.ideavimrc
 
 ### Windows
 
--
+```cmd
+mklink "%USERPROFILE%\.ideavimrc" "%USERPROFILE%\dotfiles\intellij\.ideavimrc"
+```
 

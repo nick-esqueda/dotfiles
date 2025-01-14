@@ -200,5 +200,9 @@
     "editor.formatOnSave": true
   },
   "javascript.updateImportsOnFileMove.enabled": "always",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "liveServer.settings.donotShowInfoMsg": true,
   // "javascript.updateImportsOnFileMove.enabled": "always"
 }
