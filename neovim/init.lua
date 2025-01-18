@@ -18,12 +18,6 @@ if vim.g.vscode then
   keymap("n", "<C-l>", function() vim.fn.VSCodeNotify("workbench.action.navigateRight") end)
   keymap("n", "<C-j>", function() vim.fn.VSCodeNotify("workbench.action.navigateDown") end)
   keymap("n", "<C-k>", function() vim.fn.VSCodeNotify("workbench.action.navigateUp") end)
-  keymap("n", "<Leader>H", function() vim.fn.VSCodeNotify("workbench.action.moveEditorLeftInGroup") end)
-  keymap("n", "<Leader>L", function() vim.fn.VSCodeNotify("workbench.action.moveEditorRightInGroup") end)
-  keymap("n", "<Leader><C-h>", function() vim.fn.VSCodeNotify("workbench.action.moveEditorToLeftGroup") end)
-  keymap("n", "<Leader><C-l>", function() vim.fn.VSCodeNotify("workbench.action.moveEditorToRightGroup") end)
-  keymap("n", "<Leader><C-j>", function() vim.fn.VSCodeNotify("workbench.action.moveEditorToBelowGroup") end)
-  keymap("n", "<Leader><C-k>", function() vim.fn.VSCodeNotify("workbench.action.moveEditorToAboveGroup") end)
 
   keymap("n", "<Leader>di", function() vim.fn.VSCodeNotify("workbench.action.closeActiveEditor") end)
   keymap("n", "<Leader>da", function() vim.fn.VSCodeNotify("workbench.action.closeOtherEditors") end)
@@ -34,7 +28,6 @@ if vim.g.vscode then
   keymap("n", "<Leader>f", function() vim.fn.VSCodeNotify("workbench.files.action.showActiveFileInExplorer") end)
   keymap("n", "<Leader>v", function() vim.fn.VSCodeNotify("workbench.action.splitEditorRight") end)
   keymap("n", "<Leader>s", function() vim.fn.VSCodeNotify("workbench.action.splitEditorDown") end)
-  keymap("n", "<Leader>m", function() vim.fn.VSCodeNotify("workbench.action.toggleEditorWidths") end)
 
   keymap("n", "]d", function() vim.fn.VSCodeNotify('editor.action.marker.next') end)
   keymap("n", "[d", function() vim.fn.VSCodeNotify('editor.action.marker.prev') end)
