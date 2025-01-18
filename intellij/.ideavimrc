@@ -44,7 +44,7 @@ nnoremap [d :action GotoPreviousError<CR>
 " Implementation lookup
 nnoremap gm :action GotoImplementation<CR>
 
-"Intellij features
+" Intellij features
 nnoremap <Leader>g :action Generate<CR>
 nnoremap <Leader>r :action RenameElement<CR>
 nnoremap <Leader>h :action CallHierarchy<CR>

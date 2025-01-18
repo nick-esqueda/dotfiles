@@ -1,8 +1,3 @@
--- TODOs
--- file tree plugin
--- file tree keymaps
--- window keymaps
-
 vim.g.mapleader = " "
 
 local keymap = vim.keymap.set
@@ -33,6 +28,9 @@ keymap("n", "<leader>p", "\"+p")
 keymap("v", "<leader>y", "\"+y")
 keymap("v", "<leader>p", "\"+p")
 
+-- FILE TREE KEYMAPS
+keymap("n", "<A-1>", ":NvimTreeToggle<CR>")
+
 -- VSCODE NEOVIM EXTENSION COMMMANDS
 if vim.g.vscode then
   keymap("n", "H", function() vim.fn.VSCodeNotify("workbench.action.previousEditor") end)
@@ -58,13 +56,63 @@ if vim.g.vscode then
 end
 
 -- NEOVIM OPTIONS
-vim.opt.number = true
+vim.opt.number         = true
 vim.opt.relativenumber = true
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
-vim.opt.hlsearch = false
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
-vim.opt.scrolloff = 8
+vim.opt.tabstop        = 2
+vim.opt.shiftwidth     = 2
+vim.opt.expandtab      = true
+vim.opt.hlsearch       = false
+vim.opt.ignorecase     = true
+vim.opt.smartcase      = true
+vim.opt.scrolloff      = 8
+vim.opt.termguicolors  = true  -- optionally enable 24-bit colour
+
+-- PLUGIN MANAGER SETUP
+
+-- Bootstrap lazy.nvim
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not (vim.uv or vim.loop).fs_stat(lazypath) then
+  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
+  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
+  if vim.v.shell_error ~= 0 then
+    vim.api.nvim_echo({
+      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
+      { out, "WarningMsg" },
+      { "\nPress any key to exit..." },
+    }, true, {})
+    vim.fn.getchar()
+    os.exit(1)
+  end
+end
+vim.opt.rtp:prepend(lazypath)
+
+-- Setup lazy.nvim
+require("lazy").setup({
+  spec = {
+    -- add your plugins here
+    {
+      "nvim-tree/nvim-tree.lua",
+      version = "*",
+      lazy = false,
+      dependencies = {
+        -- follow the links in the docs for file tree icons
+        -- https://github.com/nvim-tree/nvim-tree.lua?tab=readme-ov-file#requirements
+        -- install a NerdFont (ubuntu): https://medium.com/@almatins/install-nerdfont-or-any-fonts-using-the-command-line-in-debian-or-other-linux-f3067918a88c
+        "nvim-tree/nvim-web-devicons",
+      },
+      config = function()
+        require("nvim-tree").setup {}
+      end,
+    }
+  },
+  -- Configure any other settings here. See the documentation for more details.
+  -- colorscheme that will be used when installing plugins.
+  install = { colorscheme = { "habamax" } },
+  -- automatically check for plugin updates
+  checker = { enabled = true },
+})
+
+vim.g.loaded_netrw       = 1    -- disable netrw for nvim-tree
+vim.g.loaded_netrwPlugin = 1    -- disable netrw for nvim-tree
+require("nvim-tree").setup()
 
