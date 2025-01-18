@@ -34,8 +34,8 @@ nnoremap <Leader>da :action CloseAllEditorsButActive<CR>
 nnoremap <Leader>D :action CloseAllToTheRight<CR>
 nnoremap <Leader>du :action ReopenClosedTab<CR>
 nnoremap <Leader>e :action ActivateProjectToolWindow<CR>
-nnoremap <Leader>v :action SplitVertically<CR>
-nnoremap <Leader>s :action SplitHorizontally<CR>
+nnoremap <Leader>v :action MoveTabRight<CR>
+nnoremap <Leader>s :action MoveTabDown<CR>
 
 " Gutter markers navigation
 nnoremap ]d :action GotoNextError<CR>
@@ -48,3 +48,4 @@ nnoremap gm :action GotoImplementation<CR>
 nnoremap <Leader>g :action Generate<CR>
 nnoremap <Leader>r :action RenameElement<CR>
 nnoremap <Leader>h :action CallHierarchy<CR>
+nnoremap <Leader>f :action ReformatCode<CR>
