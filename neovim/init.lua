@@ -1,17 +1,40 @@
+-- TODOs
+-- file tree plugin
+-- file tree keymaps
+-- window keymaps
+
 vim.g.mapleader = " "
 
 local keymap = vim.keymap.set
+
+-- BUFFER NAVIGATION KEYMAPS
 keymap("n", "j", "gj")
 keymap("n", "k", "gk")
 keymap("n", "<C-d>", "<C-d>zz")
 keymap("n", "<C-u>", "<C-u>zz")
+
+-- BUFFER MANAGEMENT KEYMAPS
+keymap("n", "H", ":bprevious<CR>")
+keymap("n", "L", ":bnext<CR>")
+keymap("n", "<Leader>di", ":bdelete<CR>")
+
+-- WINDOW KEYMAPS
+keymap("n", "<Leader>v", ":vsplit<CR>") -- create new window (split vertically)
+keymap("n", "<Leader>s", ":split<CR>") -- create new window (split horizontally)
+keymap("n", "<Leader>q", ":close<CR>") -- close focused window (does not delete active buffer)
+keymap("n", "<C-h>", "<C-w>h") -- move focus to leftwards window
+keymap("n", "<C-l>", "<C-w>l") -- move focus to rightwards window
+keymap("n", "<C-j>", "<C-w>j") -- move focus to downwards window
+keymap("n", "<C-k>", "<C-w>k") -- move focus to upwards window
+
+-- YANK/PASTE KEYMAPS
 keymap("n", "<leader>y", "\"+y")
 keymap("n", "<leader>p", "\"+p")
 keymap("v", "<leader>y", "\"+y")
 keymap("v", "<leader>p", "\"+p")
 
+-- VSCODE NEOVIM EXTENSION COMMMANDS
 if vim.g.vscode then
-  -- VSCode extension commmands
   keymap("n", "H", function() vim.fn.VSCodeNotify("workbench.action.previousEditor") end)
   keymap("n", "L", function() vim.fn.VSCodeNotify("workbench.action.nextEditor") end)
   keymap("n", "<C-h>", function() vim.fn.VSCodeNotify("workbench.action.navigateLeft") end)
@@ -32,10 +55,9 @@ if vim.g.vscode then
   keymap("n", "]d", function() vim.fn.VSCodeNotify('editor.action.marker.next') end)
   keymap("n", "[d", function() vim.fn.VSCodeNotify('editor.action.marker.prev') end)
   keymap("n", "gm", function() vim.fn.VSCodeNotify('editor.action.goToImplementation') end)
-else
-  -- ordinary Neovim
 end
 
+-- NEOVIM OPTIONS
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.tabstop = 2
