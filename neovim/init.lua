@@ -31,6 +31,9 @@ keymap("v", "<leader>p", "\"+p")
 -- FILE TREE KEYMAPS
 keymap("n", "<A-1>", ":NvimTreeToggle<CR>")
 
+-- MISC KEYMAPS
+keymap("n", "<A-q>", ":quitall<CR>") -- close all windows and exit neovim
+
 -- VSCODE NEOVIM EXTENSION COMMMANDS
 if vim.g.vscode then
   keymap("n", "H", function() vim.fn.VSCodeNotify("workbench.action.previousEditor") end)
