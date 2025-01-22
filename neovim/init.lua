@@ -56,6 +56,7 @@ if vim.g.vscode then
   keymap("n", "]d", function() vim.fn.VSCodeNotify('editor.action.marker.next') end)
   keymap("n", "[d", function() vim.fn.VSCodeNotify('editor.action.marker.prev') end)
   keymap("n", "gm", function() vim.fn.VSCodeNotify('editor.action.goToImplementation') end)
+  return
 end
 
 -- NEOVIM OPTIONS
