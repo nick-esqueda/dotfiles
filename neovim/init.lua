@@ -1,4 +1,15 @@
-vim.g.mapleader = " "
+-- NEOVIM OPTIONS
+vim.opt.number         = true
+vim.opt.relativenumber = true
+vim.opt.tabstop        = 2
+vim.opt.shiftwidth     = 2
+vim.opt.expandtab      = true
+vim.opt.hlsearch       = false
+vim.opt.ignorecase     = true
+vim.opt.smartcase      = true
+vim.opt.scrolloff      = 8
+vim.opt.termguicolors  = true  -- optionally enable 24-bit colour
+vim.g.mapleader        = " "
 
 local keymap = vim.keymap.set
 
@@ -58,18 +69,6 @@ if vim.g.vscode then
   keymap("n", "gm", function() vim.fn.VSCodeNotify('editor.action.goToImplementation') end)
   return
 end
-
--- NEOVIM OPTIONS
-vim.opt.number         = true
-vim.opt.relativenumber = true
-vim.opt.tabstop        = 2
-vim.opt.shiftwidth     = 2
-vim.opt.expandtab      = true
-vim.opt.hlsearch       = false
-vim.opt.ignorecase     = true
-vim.opt.smartcase      = true
-vim.opt.scrolloff      = 8
-vim.opt.termguicolors  = true  -- optionally enable 24-bit colour
 
 -- PLUGIN MANAGER SETUP
 
