@@ -32,7 +32,7 @@ keymap("n", "<C-h>", "<C-w>h")          -- move focus to leftwards window
 keymap("n", "<C-l>", "<C-w>l")          -- move focus to rightwards window
 keymap("n", "<C-j>", "<C-w>j")          -- move focus to downwards window
 keymap("n", "<C-k>", "<C-w>k")          -- move focus to upwards window
-keymap("n", "<A-w>", ":set wrap!<CR>")      -- toggle line wrapping
+keymap("n", "<A-w>", ":set wrap!<CR>")  -- toggle line wrapping
 
 -- YANK/PASTE KEYMAPS
 keymap("n", "<leader>y", "\"+y")
@@ -68,6 +68,7 @@ if vim.g.vscode then
   keymap("n", "]d", function() vim.fn.VSCodeNotify('editor.action.marker.next') end)
   keymap("n", "[d", function() vim.fn.VSCodeNotify('editor.action.marker.prev') end)
   keymap("n", "gm", function() vim.fn.VSCodeNotify('editor.action.goToImplementation') end)
+
   return
 end
 
