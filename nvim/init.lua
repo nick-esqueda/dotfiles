@@ -26,12 +26,13 @@ keymap("n", "<Leader>di", ":bdelete<CR>")
 
 -- WINDOW KEYMAPS
 keymap("n", "<Leader>v", ":vsplit<CR>") -- create new window (split vertically)
-keymap("n", "<Leader>s", ":split<CR>") -- create new window (split horizontally)
-keymap("n", "<Leader>q", ":close<CR>") -- close focused window (does not delete active buffer)
-keymap("n", "<C-h>", "<C-w>h") -- move focus to leftwards window
-keymap("n", "<C-l>", "<C-w>l") -- move focus to rightwards window
-keymap("n", "<C-j>", "<C-w>j") -- move focus to downwards window
-keymap("n", "<C-k>", "<C-w>k") -- move focus to upwards window
+keymap("n", "<Leader>s", ":split<CR>")  -- create new window (split horizontally)
+keymap("n", "<Leader>q", ":close<CR>")  -- close focused window (does not delete active buffer)
+keymap("n", "<C-h>", "<C-w>h")          -- move focus to leftwards window
+keymap("n", "<C-l>", "<C-w>l")          -- move focus to rightwards window
+keymap("n", "<C-j>", "<C-w>j")          -- move focus to downwards window
+keymap("n", "<C-k>", "<C-w>k")          -- move focus to upwards window
+keymap("n", "<A-w>", ":set wrap!<CR>")      -- toggle line wrapping
 
 -- YANK/PASTE KEYMAPS
 keymap("n", "<leader>y", "\"+y")
@@ -70,52 +71,6 @@ if vim.g.vscode then
   return
 end
 
--- PLUGIN MANAGER SETUP
-
--- Bootstrap lazy.nvim
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
-if not (vim.uv or vim.loop).fs_stat(lazypath) then
-  local lazyrepo = "https://github.com/folke/lazy.nvim.git"
-  local out = vim.fn.system({ "git", "clone", "--filter=blob:none", "--branch=stable", lazyrepo, lazypath })
-  if vim.v.shell_error ~= 0 then
-    vim.api.nvim_echo({
-      { "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-      { out, "WarningMsg" },
-      { "\nPress any key to exit..." },
-    }, true, {})
-    vim.fn.getchar()
-    os.exit(1)
-  end
-end
-vim.opt.rtp:prepend(lazypath)
-
--- Setup lazy.nvim
-require("lazy").setup({
-  spec = {
-    -- add your plugins here
-    {
-      "nvim-tree/nvim-tree.lua",
-      version = "*",
-      lazy = false,
-      dependencies = {
-        -- follow the links in the docs for file tree icons
-        -- https://github.com/nvim-tree/nvim-tree.lua?tab=readme-ov-file#requirements
-        -- install a NerdFont (ubuntu): https://medium.com/@almatins/install-nerdfont-or-any-fonts-using-the-command-line-in-debian-or-other-linux-f3067918a88c
-        "nvim-tree/nvim-web-devicons",
-      },
-      config = function()
-        require("nvim-tree").setup {}
-      end,
-    }
-  },
-  -- Configure any other settings here. See the documentation for more details.
-  -- colorscheme that will be used when installing plugins.
-  install = { colorscheme = { "habamax" } },
-  -- automatically check for plugin updates
-  checker = { enabled = true },
-})
-
-vim.g.loaded_netrw       = 1    -- disable netrw for nvim-tree
-vim.g.loaded_netrwPlugin = 1    -- disable netrw for nvim-tree
-require("nvim-tree").setup()
+-- Plugin manager setup
+require("config.lazy")
 

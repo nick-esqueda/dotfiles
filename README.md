@@ -22,12 +22,12 @@ mklink "%USERPROFILE%\.bashrc" "%USERPROFILE%\dotfiles\bash\.bashrc"
 
 ## Neovim
 
-Create a symlink in the neovim config directory pointing to the init.lua file in this repo.
+Create a symlink of the `nvim` directory in the proper config location.
 
 ### Ubuntu
 
 ```bash
-ln -s ~/dotfiles/neovim/init.lua ~/.config/nvim/init.lua
+ln -s ~/dotfiles/nvim/ ~/.config/nvim
 ```
 
 ### Windows
@@ -35,7 +35,7 @@ ln -s ~/dotfiles/neovim/init.lua ~/.config/nvim/init.lua
 Run Windows Command Prompt as Administrator
 
 ```cmd
-mklink "%USERPROFILE%\AppData\Local\nvim\init.lua" "%USERPROFILE%\dotfiles\neovim\init.lua"
+<TODO>
 ```
 
 ## VS Code
