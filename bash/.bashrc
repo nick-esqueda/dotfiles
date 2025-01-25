@@ -121,12 +121,13 @@ fi
 # aliases 
 alias l="ls -a"
 alias ls="ls -a"
-alias gs='git status'
-alias gd='git diff'
-alias ga='git add .'
-alias gc='git add . && git commit -am'
-alias gl='git log --oneline --graph'
+alias gs="git status"
 alias gd="git diff"
+alias ga="git add ."
+alias gc="git add . && git commit -am"
+alias gl="git log --oneline --graph"
+alias gd="git diff"
+alias gds="git diff --staged"
 alias gps="git push"
 alias gpl="git pull"
 
