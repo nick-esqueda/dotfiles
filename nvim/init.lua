@@ -25,14 +25,14 @@ keymap("n", "L", ":bnext<CR>")
 keymap("n", "<Leader>di", ":bdelete<CR>")
 
 -- WINDOW KEYMAPS
-keymap("n", "<Leader>v", ":vsplit<CR>") -- create new window (split vertically)
-keymap("n", "<Leader>s", ":split<CR>")  -- create new window (split horizontally)
-keymap("n", "<Leader>q", ":close<CR>")  -- close focused window (does not delete active buffer)
+keymap("n", "<A-v>", ":vsplit<CR>")     -- create new window (split vertically)
+keymap("n", "<A-s>", ":split<CR>")      -- create new window (split horizontally)
+keymap("n", "<A-q>", ":close<CR>")      -- close focused window (does not delete active buffer)
+keymap("n", "<A-w>", ":set wrap!<CR>")  -- toggle line wrapping
 keymap("n", "<C-h>", "<C-w>h")          -- move focus to leftwards window
 keymap("n", "<C-l>", "<C-w>l")          -- move focus to rightwards window
 keymap("n", "<C-j>", "<C-w>j")          -- move focus to downwards window
 keymap("n", "<C-k>", "<C-w>k")          -- move focus to upwards window
-keymap("n", "<A-w>", ":set wrap!<CR>")  -- toggle line wrapping
 
 -- YANK/PASTE KEYMAPS
 keymap("n", "<leader>y", "\"+y")
@@ -44,7 +44,7 @@ keymap("v", "<leader>p", "\"+p")
 keymap("n", "<A-1>", ":NvimTreeToggle<CR>")
 
 -- MISC KEYMAPS
-keymap("n", "<A-q>", ":quitall<CR>") -- close all windows and exit neovim
+keymap("n", "<A-C-q>", ":quitall<CR>") -- close all windows and exit neovim
 
 -- VSCODE NEOVIM EXTENSION COMMMANDS
 if vim.g.vscode then
