@@ -41,7 +41,7 @@ keymap("v", "<leader>y", "\"+y")
 keymap("v", "<leader>p", "\"+p")
 
 -- FILE TREE KEYMAPS
-keymap("n", "<A-1>", ":NvimTreeToggle<CR>")
+keymap("n", "<A-1>", ":NvimTreeFindFileToggle<CR>")
 
 -- MISC KEYMAPS
 keymap("n", "<A-C-q>", ":quitall<CR>") -- close all windows and exit neovim
