@@ -25,14 +25,19 @@ keymap("n", "L", ":bnext<CR>")
 keymap("n", "<Leader>di", ":bdelete<CR>")
 
 -- WINDOW KEYMAPS
-keymap("n", "<A-v>", ":vsplit<CR>")     -- create new window (split vertically)
-keymap("n", "<A-s>", ":split<CR>")      -- create new window (split horizontally)
-keymap("n", "<A-q>", ":close<CR>")      -- close focused window (does not delete active buffer)
-keymap("n", "<A-w>", ":set wrap!<CR>")  -- toggle line wrapping
-keymap("n", "<C-h>", "<C-w>h")          -- move focus to leftwards window
-keymap("n", "<C-l>", "<C-w>l")          -- move focus to rightwards window
-keymap("n", "<C-j>", "<C-w>j")          -- move focus to downwards window
-keymap("n", "<C-k>", "<C-w>k")          -- move focus to upwards window
+keymap("n", "<A-v>", ":vsplit<CR>")      -- create new window (split vertically)
+keymap("n", "<A-s>", ":split<CR>")       -- create new window (split horizontally)
+keymap("n", "<A-q>", ":close<CR>")       -- close focused window (does not delete active buffer)
+keymap("n", "<A-w>", ":set wrap!<CR>")   -- toggle line wrapping
+keymap("n", "<A-->", ":vert res -5<CR>") -- decrease window size vertically by 5 units
+keymap("n", "<A-=>", ":vert res +5<CR>") -- increase window size vertically by 5 units
+keymap("n", "<A-_>", ":hor res -5<CR>")  -- decrease window size horizontally by 5 units
+keymap("n", "<A-+>", ":hor res +5<CR>")  -- increase window size horizontally by 5 units
+keymap("n", "<A-m>", "<C-w>=")           -- reset all windows to equal size
+keymap("n", "<C-h>", "<C-w>h")           -- move focus to leftwards window
+keymap("n", "<C-l>", "<C-w>l")           -- move focus to rightwards window
+keymap("n", "<C-j>", "<C-w>j")           -- move focus to downwards window
+keymap("n", "<C-k>", "<C-w>k")           -- move focus to upwards window
 
 -- YANK/PASTE KEYMAPS
 keymap("n", "<leader>y", "\"+y")
