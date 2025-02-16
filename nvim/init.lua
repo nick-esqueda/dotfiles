@@ -77,6 +77,6 @@ if vim.g.vscode then
   return
 end
 
--- Plugin manager setup
+-- PLUGIN MANAGER SETUP
 require("config.lazy")
 
