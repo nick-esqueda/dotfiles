@@ -23,7 +23,7 @@ M.cmpsetup = function()
       ["<C-k>"] = cmp.mapping.scroll_docs(-4),
       ["<C-j>"] = cmp.mapping.scroll_docs(4),
       ["<C-Space>"] = cmp.mapping.complete(), -- show completion suggestion
-      ["<C-[>"] = cmp.mapping.abort(), -- close completion window
+      ["<C-c>"] = cmp.mapping.abort(), -- close completion window
       ["<CR>"] = cmp.mapping.confirm({ select = false }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
     }),
 
