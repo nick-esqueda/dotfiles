@@ -207,5 +207,7 @@
   "[jsonc]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "playwright.reuseBrowser": false,
+  "playwright.pickLocatorCopyToClipboard": true,
   // "javascript.updateImportsOnFileMove.enabled": "always"
 }

@@ -116,6 +116,18 @@
     "when": "panelFocus",
     "command": "workbench.action.nextPanelView"
   },
+  
+  // ACTIONS
+  {
+    // find current file in file explorer
+    "key": "ctrl+alt+1",
+    "command": "workbench.files.action.showActiveFileInExplorer"
+  },
+  {
+    // re-run the test(s) that were most recently run
+    "key": "ctrl+alt+shift+r",
+    "command": "testing.reRunLastRun"
+  },
 
   // MISC ////////////////////////////////////////
   {

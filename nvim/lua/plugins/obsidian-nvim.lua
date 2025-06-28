@@ -4,6 +4,7 @@ vim.opt.conceallevel = 1 -- allow obsidian.nvim to conceal text (for links, etc.
 
 vim.keymap.set("n", "<Leader>ob", ":ObsidianBacklinks<CR>")
 vim.keymap.set("n", "<Leader>os", ":ObsidianSearch<CR>")
+vim.keymap.set("n", "<Leader>ot", ":ObsidianTemplate<CR>")
 
 return {
   "epwalsh/obsidian.nvim",
