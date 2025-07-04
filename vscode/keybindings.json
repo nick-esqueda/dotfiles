@@ -5,6 +5,10 @@
 [
   // VIEWS //////////////////////////////////////
   {
+    "key": "alt+0",
+    "command": "workbench.action.togglePanel",
+  },
+  {
     "key": "alt+1",
     "command": "workbench.view.explorer"
   },
@@ -191,6 +195,10 @@
     "key": "enter",
     "when": "searchInputBoxFocus",
     "command": "search.action.focusSearchList"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "-workbench.action.togglePanel"
   }
 ]
 /*
