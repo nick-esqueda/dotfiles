@@ -6,7 +6,7 @@ Clone this repo to your home directory (~/) and follow the OS-specific instructi
 
 Create a symlink in your home directory pointing to the .bashrc in this repo.
 
-### Ubuntu
+### Ubuntu & macOS
 
 ```bash
 ln -s ~/dotfiles/bash/.bashrc ~/.bashrc
@@ -24,7 +24,7 @@ mklink "%USERPROFILE%\.bashrc" "%USERPROFILE%\dotfiles\bash\.bashrc"
 
 Create a symlink of the `nvim` directory in the proper config location.
 
-### Ubuntu
+### Ubuntu & macOS
 
 ```bash
 ln -s ~/dotfiles/nvim/ ~/.config/nvim
@@ -75,6 +75,14 @@ From Git Bash
 ~/dotfiles/vscode/install-vscode-extensions.sh
 ```
 
+### macOS
+
+```bash
+ln -s ~/dotfiles/vscode/settings.json ~/Library/Application\ Support/Code/User/settings.json
+ln -s ~/dotfiles/vscode/keybindings.json ~/Library/Application\ Support/Code/User/keybindings.json
+~/dotfiles/vscode/install-vscode-extensions.sh
+```
+
 ## IntelliJ
 
 Most IntelliJ configs (keymaps, plugins, settings) are synced via JetBrains account.
@@ -85,7 +93,7 @@ Make sure your IntelliJ instance is logged in to your account to sync settings (
 
 Create a symlink in your home directory pointing to the .ideavimrc in this repo.
 
-### Ubuntu
+### Ubuntu & macOS
 
 ```bash
 ln -s ~/dotfiles/intellij/.ideavimrc ~/.ideavimrc
